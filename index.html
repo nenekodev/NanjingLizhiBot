@@ -1,37 +1,35 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="utf-8">
-	<title>李志装逼</title>
+	<title>李志装逼Bot</title>
+	<link rel="shortcut icon" href="favicon.ico" /> 
 </head>
 <body>
-	<span id="lyric"></span>
+	<span id="lyric">loading...</span>
 	<span>——《</span>
-	<span id="track"></span>
+	<span id="track">loading...</span>
 	<span>》</span>
 	<a id="playAddr" href="" target="_blank"></a>
 </body>
 
 <script src="jquery.min.js"></script>
 <script type="text/javascript">
-
 $(document).ready(function () {
-    $.ajax({
-    	type: "get",
-        url: 'NJLZ.json',
-        async: false,
-        dataType: "json",
-        success: function (data) {
-        	var number_of_lyric = 4;//0-3
+	$.ajax({
+		type: "get",
+		url: 'NJLZ.json',
+		async: false,
+		dataType: "json",
+		success: function (data) {
+			var number_of_lyric = 5;
 			var i = Math.floor(Math.random() * number_of_lyric);
-            obj = eval (data);
-            document.getElementById("lyric").innerHTML=obj.Lizhi[i].lyric 	
+			obj = eval (data);
+			document.getElementById("lyric").innerHTML=obj.Lizhi[i].lyric 	
 			document.getElementById("track").innerHTML=obj.Lizhi[i].track
 			document.getElementById("playAddr").innerHTML=obj.Lizhi[i].playAddr
 			document.getElementById("playAddr").href=obj.Lizhi[i].playAddr
-        }
-    });
+		}
+	});
 });
-
-
 </script>
 </html>
