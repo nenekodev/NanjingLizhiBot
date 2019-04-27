@@ -21,7 +21,7 @@ $(document).ready(function () {
 		async: false,
 		dataType: "json",
 		success: function (data) {
-			var number_of_lyric = 32;
+			var number_of_lyric = 33;
 			var i = Math.floor(Math.random() * number_of_lyric);
 			obj = eval (data);
 			document.getElementById("lyric").innerHTML=obj.Lizhi[i].lyric 	
