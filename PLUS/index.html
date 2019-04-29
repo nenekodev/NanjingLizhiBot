@@ -35,6 +35,8 @@
 			<!--a id="playAddr" href="" target="_blank"></a-->
 			<center>
 				<button class="btn btn-success mb-5" onclick='zhuangbi();' style="border-radius:30px;">立即装逼</button>
+				<br>
+				<button class="btn btn-info mb-5" onclick='changeLyric();' style="border-radius:30px;">换一句</button>
 			</center>
 			</div>
 		</div>
@@ -42,6 +44,12 @@
 
 <script type="text/javascript">
 $(document).ready(function () {
+	changeLyric();
+});
+
+function changeLyric(){
+	var number_of_lyric = 33;
+	var i = Math.floor(Math.random() * number_of_lyric);
 	$.ajax({
 		type: "get",
 		url: '../NJLZ.json',
@@ -57,8 +65,7 @@ $(document).ready(function () {
 			//document.getElementById("playAddr").href=obj.Lizhi[i].playAddr
 		}
 	});
-});
-
+}
 function zhuangbi(){
 	$("#qrcode").attr("style","");
 
