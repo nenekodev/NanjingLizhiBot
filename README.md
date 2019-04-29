@@ -14,7 +14,7 @@
 
 - 激动人心的更新！
 
-	GUI版李志bot上线，请访问[南京李志Bot Plus](https://df7c5117.github.io/NanjingLizhiBot/PLUS)
+	GUI版李志bot上线，请访问[南京李志Bot Plus](https://df7c5117.github.io/NanjingLizhiBot/PLUS/)
 
 	还可以导出李志装逼语录卡片，情况属实。
 
